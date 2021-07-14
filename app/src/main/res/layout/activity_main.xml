@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/textTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="24dp"
+            android:text="Covid-19 in Vietnam"
+            android:textColor="@android:color/black"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="by PAT"
+            android:textColor="#bdbdbd"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textTitle" />
+
+        <include
+            android:id="@+id/layoutGeneral"
+            layout="@layout/layout_general"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="@+id/chartViewInfected"
+            app:layout_constraintEnd_toEndOf="@+id/chartViewInfected"
+            app:layout_constraintStart_toStartOf="@+id/chartViewInfected"
+            app:layout_constraintTop_toTopOf="@+id/chartViewInfected">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_primary_rouned_rect" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_primary_rouned_rect" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_primary_rouned_rect" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_primary_rouned_rect" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_primary_rouned_rect" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_primary_rouned_rect" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_primary_rouned_rect" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_primary_rouned_rect" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_primary_rouned_rect" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_primary_rouned_rect" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_primary_rouned_rect" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_primary_rouned_rect" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_primary_rouned_rect" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_primary_rouned_rect" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@+id/chartViewInfected"
+            app:layout_constraintEnd_toEndOf="@+id/chartViewInfected"
+            app:layout_constraintStart_toStartOf="@+id/chartViewInfected"
+            app:layout_constraintTop_toTopOf="@+id/chartViewInfected">
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:background="@android:color/white" />
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:background="@android:color/white" />
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:background="@android:color/white" />
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:background="@android:color/white" />
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:background="@android:color/white" />
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:background="@android:color/white" />
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:background="@android:color/white" />
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:background="@android:color/white" />
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:background="@android:color/white" />
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:background="@android:color/white" />
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:background="@android:color/white" />
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:background="@android:color/white" />
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:background="@android:color/white" />
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:background="@android:color/white" />
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:background="@android:color/white" />
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:background="@android:color/white" />
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:background="@android:color/white" />
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:background="@android:color/white" />
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:background="@android:color/white" />
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:background="@android:color/white" />
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:background="@android:color/white" />
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:background="@android:color/white" />
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:background="@android:color/white" />
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:background="@android:color/white" />
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:background="@android:color/white" />
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:background="@android:color/white" />
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:background="@android:color/white" />
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:background="@android:color/white" />
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:background="@android:color/white" />
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:background="@android:color/white" />
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:background="@android:color/white" />
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:background="@android:color/white" />
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:background="@android:color/white" />
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:background="@android:color/white" />
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:background="@android:color/white" />
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:background="@android:color/white" />
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:background="@android:color/white" />
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:background="@android:color/white" />
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:background="@android:color/white" />
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:background="@android:color/white" />
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:background="@android:color/white" />
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:background="@android:color/white" />
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:background="@android:color/white" />
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:background="@android:color/white" />
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:background="@android:color/white" />
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:background="@android:color/white" />
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:background="@android:color/white" />
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:background="@android:color/white" />
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:background="@android:color/white" />
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:background="@android:color/white" />
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:background="@android:color/white" />
+        </LinearLayout>
+
+        <com.example.ncovi.utils.chart.ChartView
+            android:id="@+id/chartViewInfected"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_margin="32dp"
+            app:layout_constraintBottom_toTopOf="@+id/layoutGeneral"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.example.ncovi.utils.chart.ChartView
+            android:id="@+id/chartViewTreated"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_margin="32dp"
+            app:layout_constraintBottom_toTopOf="@+id/layoutGeneral"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.example.ncovi.utils.chart.ChartView
+            android:id="@+id/chartViewRecovered"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_margin="32dp"
+            app:layout_constraintBottom_toTopOf="@+id/layoutGeneral"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.example.ncovi.utils.chart.ChartView
+            android:id="@+id/chartViewDeceased"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_margin="32dp"
+            app:layout_constraintBottom_toTopOf="@+id/layoutGeneral"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <View
+            android:id="@+id/viewAxisX"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/bg_primary_rouned_rect"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chartViewInfected" />
+
+        <View
+            android:id="@+id/viewAxisY"
+            android:layout_width="2dp"
+            android:layout_height="240dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/bg_primary_rouned_rect"
+            app:layout_constraintBottom_toTopOf="@id/viewAxisX"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textMaxY"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/color_chart_desc"
+            app:layout_constraintStart_toEndOf="@+id/viewAxisY"
+            app:layout_constraintTop_toTopOf="@+id/viewAxisY"
+            tools:text="30000" />
+
+        <View
+            android:layout_width="6dp"
+            android:layout_height="2dp"
+            android:background="@drawable/bg_primary_rouned_rect"
+            app:layout_constraintBottom_toBottomOf="@id/textMaxY"
+            app:layout_constraintStart_toStartOf="@id/viewAxisX"
+            app:layout_constraintTop_toTopOf="@id/textMaxY" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="6dp"
+            android:layout_height="2dp"
+            android:background="@drawable/bg_primary_rouned_rect"
+            app:layout_constraintBottom_toBottomOf="@id/viewAxisY"
+            app:layout_constraintStart_toStartOf="@id/viewAxisX"
+            app:layout_constraintTop_toTopOf="@id/viewAxisY" />
+
+        <LinearLayout
+            android:id="@+id/layoutDays"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/layoutGeneral" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layoutDays" />
+
+        <ProgressBar
+            android:id="@+id/progressBarChart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/chartViewInfected"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/chartViewInfected" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

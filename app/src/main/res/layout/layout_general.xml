@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="64dp"
+    app:layout_constraintBottom_toBottomOf="parent">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardCountry"
+        android:layout_width="64dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FF4A65"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_round_star_24"
+            app:tint="#FFE710" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textUpdateDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="#bdbdbd"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@id/cardCountry"
+        app:layout_constraintStart_toEndOf="@id/cardCountry"
+        app:layout_constraintTop_toTopOf="@id/cardCountry"
+        tools:text="@string/title_update_date_formatted" />
+
+    <LinearLayout
+        android:id="@+id/layoutInfected"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/bg_primary_rouned_rect"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="12dp"
+        app:layout_constraintEnd_toStartOf="@+id/gl1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardCountry">
+
+        <TextView
+            android:id="@+id/textNumInfected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_num_loading"
+            android:textColor="@color/color_infected"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:text="2345" />
+
+        <TextView
+            android:id="@+id/textTitleInfected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_infected"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutTreated"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/bg_primary_rouned_rect"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/gl1"
+        app:layout_constraintTop_toBottomOf="@id/cardCountry">
+
+        <TextView
+            android:id="@+id/textNumTreated"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_num_loading"
+            android:textColor="@color/color_treated"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:text="2345" />
+
+        <TextView
+            android:id="@+id/textTitleTreated"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_treated"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutRecovered"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/bg_primary_rouned_rect"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/gl1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutInfected">
+
+        <TextView
+            android:id="@+id/textNumRecovered"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_num_loading"
+            android:textColor="@color/color_recovered"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:text="2345" />
+
+        <TextView
+            android:id="@+id/textTitleRecovered"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_recovered"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutDeceased"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/bg_primary_rouned_rect"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/gl1"
+        app:layout_constraintTop_toBottomOf="@+id/layoutTreated">
+
+        <TextView
+            android:id="@+id/textNumDeceased"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_num_loading"
+            android:textColor="@color/color_deceased"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:text="2345" />
+
+        <TextView
+            android:id="@+id/textTitleDeceased"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_deceased"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

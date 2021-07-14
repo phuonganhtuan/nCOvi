@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">nCOvi</string>
+    <string name="title_infected">Infected</string>
+    <string name="title_treated">Treated</string>
+    <string name="title_recovered">Recovered</string>
+    <string name="title_deceased">Deceased</string>
+    <string name="title_num_loading">---</string>
+    <string name="title_update_date_formatted">Last updated: %s</string>
+</resources>
